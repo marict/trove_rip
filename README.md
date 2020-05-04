@@ -12,7 +12,8 @@ pip install tqdm
 ```
 
 ## Usage
-Pass in the directory with the images you want to extract. 
+Pass in the directory with the images you want to extract 
+and it create a folder and save the images there
 Example:
 ```
 python trove_rip.py https://thetrove.net/Assets/Map%20Assets/Interior/Decoration/
