@@ -5,10 +5,6 @@ import tqdm
 import sys
 from bs4 import BeautifulSoup
 
-# site = 'http://pixabay.com'
-# site = 'https://thetrove.net/Assets/Map%20Assets/Sewers/Sewer_Pipes_id1/'
-
-
 def write_images(site):
     print("Writing images for site: {}".format(site))
     storage_dir = site.split('/')[-2]
@@ -23,7 +19,6 @@ def write_images(site):
         if url == "./Bandit%201.png":
             import pdb; pdb.set_trace()
             
-        # filename = re.search(r'/([\w_-]+[.](jpg|gif|png))$', url)
         filename = re.search(r'.+[.](jpg|gif|png)$', url)
         if not filename:
             print("Regex didn't match with the url: {}".format(url))
@@ -43,6 +38,7 @@ if args[1] is not None:
     site = args[1]
     import pdb; pdb.set_trace()
 else:
+    # Set default here
     site = "https://thetrove.net/Assets/Map%20Assets/Terrain%20-%20cover/Rubble/"
 write_images(site)
 
